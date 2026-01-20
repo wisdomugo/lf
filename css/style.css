@@ -1,0 +1,98 @@
+html {
+    font-size: 90%;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --whitepure: #fff;
+    --dark: #1b323d;
+    --transparent-dark: hsla(199, 34%, 17%, 0.8);
+    --deepblue: #023047;
+    --deepyellow: #fb8500;
+    --deepbrown: #850103;
+    --accent: #fb8704;
+}
+
+* {
+    box-sizing: border-box;
+    margin-bottom: .6em;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit';
+    color: var(--dark);
+}
+
+a, ul {
+    font-family: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+    margin-top: 0;
+}
+
+
+h1 {
+    font-family: 'Outfit';
+    font-size: clamp(1rem, 1.5rem + 2vw, 2rem);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+    padding-top: .4em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.container {
+    height: 90vh;
+    width: 90%;
+    background-color: red;
+}
+
+.logo {
+    width: 20%;
+}
+
+.dform {
+    
+}
+
+
+
+/* Utilitu Classes */
+
+.blockit {
+    display: block;
+}
