@@ -6,7 +6,8 @@ html {
     --white: hsl(0, 0%, 100%);
     --whitepure: #fff;
     --dark: #1b323d;
-    --transparent-dark: hsla(199, 34%, 17%, 0.1);
+    --transparent-dark: hsla(199, 34%, 17%, 0.04);
+    --transparent-dark-2: hsla(199, 34%, 17%, 0.6);
     --deepblue: #023047;
     --deepyellow: #fb8500;
     --deepbrown: #850103;
@@ -24,7 +25,8 @@ body {
     color: var(--dark);
 }
 
-a, ul {
+a,
+ul {
     font-family: inherit;
 }
 
@@ -49,11 +51,15 @@ h1 {
     line-height: 1.1;
 }
 
-p, ul, label, input {
-    font-size: clamp(1rem, 1rem + .5vw, 2rem);
+p,
+ul,
+label,
+input,
+select {
+    font-size: clamp(1rem, .5rem + 1.2vw, 2rem);
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +81,7 @@ header {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--accent);
 }
@@ -101,14 +107,25 @@ a{
 
 .lead-content {
     background-color: var(--accent);
-    padding: 0 2em;
+    padding: 1.5em 2em;
+}
+
+.lead-content,
+.lead-form {
+    margin-bottom: 0;
 }
 
 .brand-image {
     width: 30%;
+    display: block;
+    margin: 0 auto;
 }
 
-form{
+.tiny-p {
+    font-size: clamp(1rem, .3rem + 1.5vw, 2rem);
+}
+
+form {
     width: 80%;
 }
 
@@ -117,16 +134,28 @@ label {
     margin-bottom: .2em;
 }
 
-input:not([type="submit"]), select {
+input:not([type="submit"]),
+select {
     width: 100%;
-
 }
 
-input, select {
+h3 {
+    display: none;
+}
+
+input,
+select {
     display: block;
     padding: .3em;
-    border: solid 1px var(--dark);
+    border: solid 1px var(--transparent-dark-2);
     border-radius: 0;
+}
+
+input[type="submit"] {
+    padding: .5em 1em;
+    background-color: var(--deepblue);
+    color: var(--white);
+    margin-top: 1.3em;
 }
 
 
@@ -135,4 +164,45 @@ input, select {
 
 .blockit {
     display: block;
+}
+
+
+@media screen and (min-width: 600px) {
+    article {
+        flex-direction: row;
+    }
+
+    .container {
+        height: 70vh;
+    }
+
+    .lead-content,
+    .lead-form {
+        width: 50%;
+    }
+
+    .lead-content{
+        padding: 0 3em;
+        padding-top: 9em;
+        padding-bottom: 1em;
+
+    }
+
+    h3 {
+        display: block;
+        font-size: clamp(1rem, .6rem + 1.3vw, 2rem);
+    }
+
+    .form-group {
+        margin-bottom: 1em;
+    }
+
+    input[type="submit"] {
+        margin-top: 1.3em;
+    }
+
+    .tiny-p {
+        font-size: clamp(1rem, .3rem + 1.3vw, 2rem);
+    }
+
 }
