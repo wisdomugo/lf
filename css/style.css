@@ -6,7 +6,7 @@ html {
     --white: hsl(0, 0%, 100%);
     --whitepure: #fff;
     --dark: #1b323d;
-    --transparent-dark: hsla(199, 34%, 17%, 0.8);
+    --transparent-dark: hsla(199, 34%, 17%, 0.1);
     --deepblue: #023047;
     --deepyellow: #fb8500;
     --deepbrown: #850103;
@@ -49,6 +49,10 @@ h1 {
     line-height: 1.1;
 }
 
+p, ul, label, input {
+    font-size: clamp(1rem, 1rem + .5vw, 2rem);
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -68,6 +72,7 @@ header {
     justify-content: space-between;
     padding: 0 1em;
     padding-top: .4em;
+    margin: 0;
 }
 
 a{
@@ -78,7 +83,6 @@ a{
 .container {
     height: 90vh;
     width: 90%;
-    background-color: red;
 }
 
 .logo {
@@ -86,7 +90,43 @@ a{
 }
 
 .dform {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lead-form {
+    background-color: var(--transparent-dark);
+}
+
+.lead-content {
+    background-color: var(--accent);
+    padding: 0 2em;
+}
+
+.brand-image {
+    width: 30%;
+}
+
+form{
+    width: 80%;
+}
+
+label {
+    display: block;
+    margin-bottom: .2em;
+}
+
+input:not([type="submit"]), select {
+    width: 100%;
+
+}
+
+input, select {
+    display: block;
+    padding: .3em;
+    border: solid 1px var(--dark);
+    border-radius: 0;
 }
 
 

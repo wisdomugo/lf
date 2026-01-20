@@ -28,11 +28,49 @@
                     </header>
 
                     <section class="dform">
+                        <form>
+                            <div class="form-group">
+                                <label>Full Name:</label>
+                                <input type="text" name="fullName" id="fullName">
+                            </div>
 
+                            <div class="form-group">
+                                <label>Email Address:</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone:</label>
+                                <input type="number" name="phone" id="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Choose service:</label>
+                                <select name="service" id="service">
+                                    <options>IT Support & Helpdesk</options>
+                                    <options>Procurement services</options>
+                                    <options>Cloud services</options>
+                                    <options>Cyber security</options>
+                                    <options>Microsoft 365 Copilot</options>
+                                </select>
+                            </div>
+
+                        <input type="hidden" id="utm_source" name="utm_source">
+                        <input type="hidden" id="utm_medium" name="utm_medium">
+                        <input type="hidden" id="utm_campaign" name="utm_campaign">
+
+                        <input type="submit" value="Send Request">
+                        <label id="response"></label>
+
+                        </form>
                     </section>
                 </div>
 
-                <div class="lead-content"></div>
+                <div class="lead-content">
+                    <img alt="brand image" class="brand-image" src="./images/it2.png">
+                    <h3>Where IT is simplified for a complex world</h3>
+                    <p>We combine unparalleled technical proficiency with a deep understanding of our client's needs. From tailored IT solutions to comprehensive IT support</p>
+                </div>
             </article>
 
         </div>
