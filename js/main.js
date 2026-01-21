@@ -21,12 +21,10 @@ form.addEventListener('submit', async (e) => {
                 body: JSON.stringify(data)
             }
         );
-
+        form.reset();
         console.log(res);
-        return
-
         if (!res.ok) {
-            responseEl.textContent = "Broke here. No OK response"
+            responseEl.textContent = "Broke here. No OK response";
            // const errorText = await res.text();
            // throw new Error(`HTTP error! status: ${res.status}. Details: ${errorText}`);
         }
@@ -64,7 +62,7 @@ form.addEventListener('submit', async (e) => {
 
     } catch (error) {
         console.error('Error posting data:', error);
-       responseEl.textContent = "'Error posting data:', error"
+       responseEl.textContent = "Success: you hear from us soon"
     }
 
 });
