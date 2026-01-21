@@ -174,6 +174,7 @@ input[type="submit"] {
 
     .container {
         height: 70vh;
+        width: 70%;
     }
 
     .lead-content,
