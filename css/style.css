@@ -55,7 +55,7 @@ p,
 ul,
 label,
 input,
-select {
+select, textarea{
     font-size: clamp(1rem, .5rem + 1.2vw, 2rem);
 }
 
@@ -65,6 +65,10 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /*
+    min-height: 100vh;
+    max-height: 100vh;
+    */
 }
 
 article {
@@ -135,7 +139,7 @@ label {
 }
 
 input:not([type="submit"]),
-select {
+select, textarea {
     width: 100%;
 }
 
@@ -168,6 +172,15 @@ input[type="submit"] {
 
 
 @media screen and (min-width: 600px) {
+    html {
+        font-size: 60%;
+    }
+
+    main{
+        padding-bottom: 5em;
+        height: 100vh;
+    }
+
     article {
         flex-direction: row;
     }
@@ -182,7 +195,7 @@ input[type="submit"] {
         width: 50%;
     }
 
-    .lead-content{
+    .lead-content {
         padding: 0 3em;
         padding-top: 9em;
         padding-bottom: 1em;
