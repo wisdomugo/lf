@@ -64,7 +64,7 @@ p,
 ul,
 label,
 input,
-select, textarea{
+select, textarea, a{
     font-size: clamp(1rem, .5rem + 1.2vw, 2rem);
 }
 
