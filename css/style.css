@@ -140,9 +140,10 @@ a {
 }
 
 .brand-image {
-    width: 50%;
+    width: 60%;
     display: block;
     margin: 0 auto;
+    margin-bottom: 1em;
 }
 
 .tiny-p {
@@ -166,6 +167,7 @@ select, textarea {
 
 h3 {
     display: block;
+    font-weight: 800;
 }
 
 input,
@@ -226,6 +228,7 @@ input[type="submit"] {
     h3 {
         display: block;
         font-size: clamp(1rem, .6rem + 1.3vw, 2rem);
+        font-weight: bold;
     }
 
     .form-group {
