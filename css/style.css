@@ -63,7 +63,7 @@ li {
 }
 
 
-h1 {
+h3 {
     font-family: 'Gotham Rounded Light';
     font-size: clamp(1rem, 1.5rem + 2vw, 2rem);
     font-weight: 500;
@@ -140,7 +140,7 @@ a {
 }
 
 .brand-image {
-    width: 60%;
+    width: 50%;
     display: block;
     margin: 0 auto;
     margin-bottom: 1em;
@@ -167,7 +167,7 @@ select, textarea {
 
 h3 {
     display: block;
-    font-weight: 800;
+    font-family: 'Gotham Rounded Medium';
 }
 
 input,
@@ -222,13 +222,13 @@ input[type="submit"] {
         padding: 0 3em;
         padding-top: 9em;
         padding-bottom: 1em;
+        text-align: center;
 
     }
 
     h3 {
         display: block;
-        font-size: clamp(1rem, .6rem + 1.3vw, 2rem);
-        font-weight: bold;
+        font-size: clamp(1rem, .6rem + 1.6vw, 2rem);
     }
 
     .form-group {
