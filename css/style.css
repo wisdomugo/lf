@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Gotham Rounded Medium';
+  src: url('../fonts/Gotham\ Rounded\ Medium.otf') format('otf'),
+       url('fonts/Gotham Rounded Medium.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
     font-size: 90%;
 }
@@ -21,6 +29,7 @@ html {
 
 body {
     margin: 0;
+    
     font-family: 'Outfit';
     color: var(--dark);
 }
@@ -110,7 +119,8 @@ a {
 }
 
 .lead-content {
-    background-color: var(--accent);
+    color: var(--white);
+    background-color: var(--deepblue);
     padding: 1.5em 2em;
 }
 
@@ -120,7 +130,7 @@ a {
 }
 
 .brand-image {
-    width: 50%;
+    width: 30%;
     display: block;
     margin: 0 auto;
 }
