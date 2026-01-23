@@ -1,7 +1,10 @@
+/* ================================
+   Fonts
+=================================== */
 @font-face {
   font-family: 'Gotham Rounded Medium';
   src: url('../fonts/Gotham-Rounded-Medium.woff') format('woff'),
-       url('fonts/Gotham-Rounded-Medium.woff2') format('woff2');
+       url('../fonts/Gotham-Rounded-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -9,36 +12,42 @@
 @font-face {
   font-family: 'Gotham Rounded Light';
   src: url('../fonts/Gotham-Rounded-Light.woff') format('woff'),
-       url('fonts/Gotham-Rounded-Light.woff2') format('woff2');
+       url('../fonts/Gotham-Rounded-Light.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
-html {
-    font-size: 90%;
+/* ================================
+   Root Variables
+=================================== */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --whitepure: #fff;
+  --dark: #1b323d;
+  --transparent-dark: hsla(199, 34%, 17%, 0.04);
+  --transparent-dark-2: hsla(199, 34%, 17%, 0.6);
+  --deepblue: #023047;
+  --deepyellow: #fb8500;
+  --deepbrown: #850103;
+  --accent: #fb8704;
 }
 
-:root {
-    --white: hsl(0, 0%, 100%);
-    --whitepure: #fff;
-    --dark: #1b323d;
-    --transparent-dark: hsla(199, 34%, 17%, 0.04);
-    --transparent-dark-2: hsla(199, 34%, 17%, 0.6);
-    --deepblue: #023047;
-    --deepyellow: #fb8500;
-    --deepbrown: #850103;
-    --accent: #fb8704;
+/* ================================
+   Global Reset & Base
+=================================== */
+html {
+  font-size: 90%;
 }
 
 * {
-    box-sizing: border-box;
-    margin-bottom: .6em;
+  box-sizing: border-box;
+  margin-bottom: 0.6em;
 }
 
 body {
-    margin: 0;
-    font-family: 'Gotham Rounded Light';
-    color: var(--dark);
+  margin: 0;
+  font-family: 'Gotham Rounded Light';
+  color: var(--dark);
 }
 
 a,
@@ -46,7 +55,7 @@ ul,
 input,
 textarea,
 select {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 p,
@@ -59,188 +68,198 @@ h6,
 ul,
 ol,
 li {
-    margin-top: 0;
+  margin-top: 0;
 }
 
-
+/* ================================
+   Typography
+=================================== */
 h1 {
-    font-family: 'Gotham Rounded Light';
-    font-size: clamp(1rem, 1.5rem + 2vw, 2rem);
-    font-weight: 500;
-    line-height: 1.1;
+  font-family: 'Gotham Rounded Light';
+  font-size: clamp(1rem, 1.5rem + 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 p,
 ul,
 label,
 input,
-select, textarea, a{
-    font-size: clamp(1rem, .5rem + 1.2vw, 2rem);
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /*
-    min-height: 100vh;
-    max-height: 100vh;
-    */
-}
-
-article {
-    display: flex;
-    flex-direction: column;
-
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1em;
-    padding-top: .4em;
-    margin: 0;
-}
-
+select,
+textarea,
 a {
-    text-decoration: none;
-    color: var(--accent);
+  font-size: clamp(1rem, 0.5rem + 1.2vw, 2rem);
 }
 
-.container {
-    height: 90vh;
-    width: 90%;
-}
-
-.logo {
-    width: 20%;
-}
-
-.dform {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.lead-form {
-    background-color: var(--transparent-dark);
-}
-
-.lead-content {
-    color: var(--white);
-    background-color: var(--deepblue);
-    padding: 1.5em 2em;
-}
-
-.lead-content,
-.lead-form {
-    margin-bottom: 0;
-}
-
-.brand-image {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 1em;
+.medium-text {
+  font-size: clamp(1.5rem, 0.9rem + 1.5vw, 2rem);
+  font-weight: 500;
+  margin: 0.5em 0;
 }
 
 .tiny-p {
-    font-size: clamp(1rem, .3rem + 1.5vw, 2rem);
+  font-size: clamp(0.7rem, 0.3rem + 1vw, 1.0rem);
+  font-weight: lighter;
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* ================================
+   Layout
+=================================== */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  height: 90vh;
+  width: 90%;
+}
+
+/* ================================
+   Form
+=================================== */
+.dform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lead-form {
+  background-color: var(--transparent-dark);
 }
 
 form {
-    width: 80%;
+  width: 80%;
+}
+
+.form-group {
+  margin-bottom: 1em;
 }
 
 label {
-    display: block;
-    margin-bottom: .2em;
-    font-weight: 600;
+  display: block;
+  margin-bottom: 0.2em;
+  font-weight: 600;
 }
 
 input:not([type="submit"]),
-select, textarea {
-    width: 100%;
-}
-
-h3 {
-    display: block;
-    font-family: 'Gotham Rounded Medium';
+select,
+textarea {
+  width: 100%;
 }
 
 input,
 select {
-    display: block;
-    padding: .3em;
-    border: solid 1px var(--transparent-dark-2);
-    border-radius: 0;
+  display: block;
+  padding: 0.3em;
+  border: solid 1px var(--transparent-dark-2);
+  border-radius: 0;
 }
 
 input[type="submit"] {
-    padding: .5em 1em;
-    background-color: var(--deepblue);
-    color: var(--white);
-    margin-top: 1.3em;
+  padding: 0.5em 1em;
+  background-color: var(--deepblue);
+  color: var(--white);
+  margin-top: 0.5em;
 }
 
-
-
-/* Utilitu Classes */
-
-.blockit {
-    display: block;
+/* Action Row */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5em;
 }
 
+.left-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
 
+.right-actions {
+  text-align: right;
+}
+
+.moreinfo {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: clamp(0.9rem, 0.9rem + 4vw, 1.7rem);
+  text-decoration: underline;
+}
+
+/* ================================
+   Lead Content
+=================================== */
+.lead-content {
+  color: var(--white);
+  background-color: var(--deepblue);
+  padding: 1.5em 2em;
+  text-align: center;
+}
+
+.brand-image {
+  max-width: 170px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1em auto;
+}
+
+/* ================================
+   Media Queries
+=================================== */
 @media screen and (min-width: 600px) {
-    html {
-        font-size: 60%;
-    }
+  html {
+    font-size: 60%;
+  }
 
-    main{
-        padding-bottom: 5em;
-        height: 100vh;
-    }
+  main {
+    padding-bottom: 5em;
+    height: 100vh;
+  }
 
-    article {
-        flex-direction: row;
-    }
+  article {
+    flex-direction: row;
+  }
 
-    .container {
-        height: 70vh;
-        width: 70%;
-    }
+  .container {
+    height: 70vh;
+    width: 70%;
+  }
 
-    .lead-content,
-    .lead-form {
-        width: 50%;
-    }
+  .lead-content,
+  .lead-form {
+    width: 50%;
+  }
 
-    .lead-content {
-        padding: 0 3em;
-        padding-top: 9em;
-        padding-bottom: 1em;
-        text-align: center;
+  .lead-content {
+    padding: 0 3em;
+    padding-top: 9em;
+    padding-bottom: 1em;
+    text-align: center;
+  }
 
-    }
+  .tiny-p {
+    font-size: clamp(1rem, 0.3rem + 1.3vw, 2rem);
+  } 
 
-    h3 {
-        display: block;
-        font-size: clamp(1rem, .6rem + 1.6vw, 2rem);
-    }
+  .form-group {
+    margin-bottom: 1em;
+  }
 
-    .form-group {
-        margin-bottom: 1em;
-    }
-
-    input[type="submit"] {
-        margin-top: 1.3em;
-    }
-
-    .tiny-p {
-        font-size: clamp(1rem, .3rem + 1.3vw, 2rem);
-    }
-
+  input[type="submit"] {
+    margin-top: 1.3em;
+  }
 }
