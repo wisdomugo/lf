@@ -73,7 +73,7 @@ form.addEventListener('submit', async (e) => {
 
     } catch (error) {
         console.error('Error posting data:', error);
-        responseEl.textContent = "Success, We will respond soon"
+        responseEl.textContent = "Your request has been submitted successfully."
     }
 
 });
