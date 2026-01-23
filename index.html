@@ -2,97 +2,111 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Inter5 Form</title>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <title>Inter5 Form</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap" 
+    rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
-        rel="stylesheet">
-
-    <link href="css/style.css" rel="stylesheet">
+  <!-- External CSS -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <article>
-                <div class="lead-form">
-                    <header>
-                        <!-- <img class="blockit logo" alt="" src="./images/logo/1new.png"> -->
-                        <a class="blockit" href="https://www.inter5it.com">More info? visit site</a>
-                    </header>
+  <main>
+    <div class="container">
+      <article>
 
-                    <section class="dform">
-                        <form method="POST" id="leadForm">
-                            <div class="form-group">
-                                <label for="fullName">Full Name:</label>
-                                <input type="text" name="fullName" id="fullName">
-                            </div>
+        <!-- Lead Form Section -->
+        <div class="lead-form">
+          <section class="dform">
+            <form method="POST" id="leadForm">
 
-                            <div class="form-group">
-                                <label for="email">Email Address:</label>
-                                <input type="email" name="email" id="email">
-                            </div>
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" name="fullName" id="fullName">
+              </div>
 
-                            <div class="form-group">
-                                <label for="phone">Phone:</label>
-                                <input type="number" name="phone" id="phone">
-                            </div>
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" name="email" id="email">
+              </div>
 
-                             <div class="form-group">
-                                <label for="company">Company:</label>
-                                <input type="text" name="company" id="company">
-                            </div>
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="number" name="phone" id="phone">
+              </div>
 
-                            <div class="form-group">
-                                <label for="companySize">Company Size:</label>
-                                <input type="number" name="companySize" id="companySize">
-                            </div>
+              <!-- Company -->
+              <div class="form-group">
+                <label for="company">Company:</label>
+                <input type="text" name="company" id="company">
+              </div>
 
-                            <!--
-                            <div class="form-group">
-                                <label for="companyNeed"><b>Optional: </b>Can you briefly explain your need:</label>
-                                <textarea id="companyNeed" name="companyNeed" placeholder="If you can, briefly explain your company need"></textarea>
-                            </div>
-                            -->
+              <!-- Company Size -->
+              <div class="form-group">
+                <label for="companySize">Company Size:</label>
+                <input type="number" name="companySize" id="companySize">
+              </div>
 
-                            <div class="form-group">
-                                <label for="service">Choose service:</label>
-                                <select name="service" id="services">
-                                    <option value="IT Support & Helpdesk">Infrastructure Design & Integration</option>
-                                    <option value="Procurement services">Managed IT Services</option>
-                                    <option value="Cloud services">IT Strategy & Data Privacy</option>
-                                    <option value="Cyber security">Training & Development</option>
-                                </select>
-                            </div>
+              <!-- Service Selection -->
+              <div class="form-group">
+                <label for="service">Choose service:</label>
+                <select name="service" id="services">
+                  <option value="IT Support & Helpdesk">Infrastructure Design & Integration</option>
+                  <option value="Procurement services">Managed IT Services</option>
+                  <option value="Cloud services">IT Strategy & Data Privacy</option>
+                  <option value="Cyber security">Training & Development</option>
+                  <option value="Cyber security">Other</option>
+                </select>
+              </div>
 
-                            <input type="hidden" id="utm_source" name="utm_source">
-                            <input type="hidden" id="utm_medium" name="utm_medium">
-                            <input type="hidden" id="utm_campaign" name="utm_campaign">
+              <!-- Hidden Tracking Fields -->
+              <input type="hidden" id="utm_source" name="utm_source">
+              <input type="hidden" id="utm_medium" name="utm_medium">
+              <input type="hidden" id="utm_campaign" name="utm_campaign">
 
-                            <input type="submit" value="Send Request">
-                            <label id="response"></label>
-
-                        </form>
-                    </section>
+              <!-- Action Row -->
+              <div class="form-actions">
+                <div class="left-actions">
+                  <input type="submit" value="Send Request">
+                  <label id="response"></label>
                 </div>
-
-                <div class="lead-content">
-                    <img alt="brand image" class="brand-image" src="./images/logo/vim.png">
-                    <h3>Simplifying IT for a Complex World</h3>
-                    <p class="tiny-p">We combine unparalleled technical expertise with a deep understanding of our clients' needs to tailor technology solutions that solve their unique needs.</p>
+                <div class="right-actions">
+                  <a href="inter5it.com" class="moreinfo">More Info? Visit site</a>
                 </div>
-            </article>
+              </div>
 
+            </form>
+          </section>
         </div>
-    </main>
 
-    <script src="js/main.js" type="text/javascript"></script>
+        <!-- Lead Content Section -->
+        <div class="lead-content ">
+          <img alt="brand image" class="brand-image" src="./images/logo/vim.png">
+          <h3 class="medium-text">Simplifying IT for a Complex World</h3>
+          <h5 class="tiny-p">
+            We combine unparalleled technical expertise with a deep understanding of our clients' needs 
+            to tailor technology solutions that solve their unique needs.
+          </h5>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- External JS -->
+  <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
