@@ -5,9 +5,15 @@ const responseEl = document.getElementById('response');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(form);
+    const submitBtn = document.getElementById('submitBtn');
+    const loadingIcon = document.getElementById('loadingIcon');
 
+    loadingIcon.style.display = 'inline-block';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    form.reset();
 
     try {
         const res = await fetch(
@@ -21,12 +27,17 @@ form.addEventListener('submit', async (e) => {
                 body: JSON.stringify(data)
             }
         );
-        form.reset();
-        console.log(res);
+
+        // console.log(res);
+        if (res) {
+            loadingIcon.style.display = 'none';
+            submitBtn.disabled = false;
+        }
+
         if (!res.ok) {
             responseEl.textContent = "Broke here. No OK response";
-           // const errorText = await res.text();
-           // throw new Error(`HTTP error! status: ${res.status}. Details: ${errorText}`);
+            // const errorText = await res.text();
+            // throw new Error(`HTTP error! status: ${res.status}. Details: ${errorText}`);
         }
 
         // Parse the JSON response body
@@ -62,7 +73,7 @@ form.addEventListener('submit', async (e) => {
 
     } catch (error) {
         console.error('Error posting data:', error);
-       responseEl.textContent = "Success: you hear from us soon"
+        responseEl.textContent = "Success, We will respond soon"
     }
 
 });

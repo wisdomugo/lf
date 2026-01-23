@@ -7,7 +7,7 @@
 
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <title>Inter5 Form</title>
+    <title>Inter5 IT Solutions | Customer Inquiry Form</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +22,6 @@
         <div class="container">
             <article>
                 <div class="lead-form">
-                    <header>
-                        <!-- <img class="blockit logo" alt="" src="./images/logo/1new.png"> -->
-                        <a class="blockit" href="https://www.inter5it.com">More info? visit site</a>
-                    </header>
 
                     <section class="dform">
                         <form method="POST" id="leadForm">
@@ -44,7 +40,7 @@
                                 <input type="number" name="phone" id="phone">
                             </div>
 
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="company">Company:</label>
                                 <input type="text" name="company" id="company">
                             </div>
@@ -54,13 +50,6 @@
                                 <input type="number" name="companySize" id="companySize">
                             </div>
 
-                            <!--
-                            <div class="form-group">
-                                <label for="companyNeed"><b>Optional: </b>Can you briefly explain your need:</label>
-                                <textarea id="companyNeed" name="companyNeed" placeholder="If you can, briefly explain your company need"></textarea>
-                            </div>
-                            -->
-
                             <div class="form-group">
                                 <label for="service">Choose service:</label>
                                 <select name="service" id="services">
@@ -68,15 +57,33 @@
                                     <option value="Procurement services">Managed IT Services</option>
                                     <option value="Cloud services">IT Strategy & Data Privacy</option>
                                     <option value="Cyber security">Training & Development</option>
+                                    <option value="Other">Other</option>
                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <br>
+                                <label for="details">Additional Details:</label>
+                                <textarea rows="5" id="details" name="details" placeholder="Details.."></textarea>
                             </div>
 
                             <input type="hidden" id="utm_source" name="utm_source">
                             <input type="hidden" id="utm_medium" name="utm_medium">
                             <input type="hidden" id="utm_campaign" name="utm_campaign">
 
-                            <input type="submit" value="Send Request">
-                            <label id="response"></label>
+                            <input id="submitBtn" type="submit" value="Send Request">
+                            <!-- Loading Animation Container -->
+                            <p id="loadingIcon">
+                                <span class="spinner"></span> Processing...
+                            </p>
+
+                            <label style="display: inline-block;" id="response"></label>
+
+                            <header>
+                                <!-- <img class="blockit logo" alt="" src="./images/logo/1new.png"> -->
+                                <a class="blockit" href="https://www.inter5it.com">More info? Visit our site</a>
+                            </header>
+                            
 
                         </form>
                     </section>
@@ -85,7 +92,8 @@
                 <div class="lead-content">
                     <img alt="brand image" class="brand-image" src="./images/logo/vim.png">
                     <h3>Simplifying IT for a Complex World</h3>
-                    <p class="tiny-p">We combine unparalleled technical expertise with a deep understanding of our clients' needs to tailor technology solutions that solve their unique needs.</p>
+                    <p class="tiny-p">We combine unparalleled technical expertise with a deep understanding of our
+                        clients' needs to tailor technology solutions that solve their unique needs.</p>
                 </div>
             </article>
 
